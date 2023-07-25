@@ -77,7 +77,21 @@ public class KeyPadAllPossibleCombinations {
         return false;
     }
     public static void main(String args[]) throws IOException {
-
+    /*
+    consider the mobile keypad below
+    123
+    456
+    789
+    *0#
+    below are the rules to  be followed to generate the 6 digit unique nos from the keypad:
+    1. no 2 adjacent digits in the six digits should not be same
+    2. immediate next digit should be from same row or column
+    3. * and # can only occur at the beginning or at the end
+    145820 - valid
+    131313 - valid
+    *45820 - valid 
+    generate and return overall count of all possible combinations using the above rules
+    */
         char[][] keypad = {
                 {'1','2','3'},
                 {'4','5','6'},
